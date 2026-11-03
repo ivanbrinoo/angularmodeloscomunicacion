@@ -1,6 +1,13 @@
 <h1>Comics:</h1>
-<p style="color:blue">
+<!-- <p style="color:blue">
     Titulo: {{comic.titulo}}<br/>
-    <img src="{{comic.imagen}}" style="width: 400px;"><br/>
+    <img src="{{comic.imagen}}" style="width: 40%; height: 40%;"><br/>
     Descripcion: {{comic.descripcion}}
-</p>
+</p> -->
+<button (click)="mostrarComics()" class="btn btn-info">Mostrar Comics</button>
+@for (tebeo of arraycomics; track tebeo){
+    <p style="color:blue">Nombre: {{tebeo.titulo}}</p>
+    <p style="color:blue">Descripcion: {{tebeo.descripcion}}</p>
+    <p style="color:blue"><img src="{{tebeo.imagen}}" style="width: 40%; height: 40%;"></p>
+    
+}
