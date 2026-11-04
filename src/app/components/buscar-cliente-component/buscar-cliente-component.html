@@ -1,0 +1,13 @@
+<form formulario="ngForm">
+    Introduce la ID:
+    <input type="number" name="cajaid" #cajaid>
+
+    <button type="button" (click)="mostrarClientes()">
+        Buscar
+    </button>
+</form>
+@if(cliente){
+<h2>{{cliente.nombre}}</h2>
+<h2><a href="{{cliente.paginaweb}}">{{cliente.paginaweb}}</a></h2>
+<h2><img src="{{cliente.imagencliente}}" style="width: 30%; height: 40%;"></h2>
+}
