@@ -1,0 +1,6 @@
+<button (click)="mostrarJugadores()" class="btn btn-info">Mostrar Jugadores</button>
+@for (players of arrayjugador; track players){
+    <p style="color:blue">Nombre: {{players.jugador}}</p>
+    <p style="color:blue"><img src="{{players.imagen}}" style="width: 30%; height: 40%;"></p>
+    
+}
