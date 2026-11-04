@@ -1,5 +1,5 @@
 import id from '@angular/common/locales/id';
-import { ChangeDetectorRef, Component, ElementRef, ViewChild} from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { Clientes } from '../../models/cliente';
 
 @Component({
@@ -8,13 +8,19 @@ import { Clientes } from '../../models/cliente';
   styleUrl: './buscar-cliente-component.css',
   templateUrl: './buscar-cliente-component.html',
 })
-export class BuscarClienteComponent {
+export class BuscarClienteComponent implements OnInit {
 @ViewChild("cajaid") cajaid!: ElementRef;
 cliente!: Clientes;
 
 
-
-
+async ngOnInit(): Promise<void> {
+  let ruta = "documents/clientesdatos.json";
+  let response = await fetch(ruta);
+  let datos = await response.json();
+  for (let elemento of datos){
+    
+  }
+}
 constructor(
   private cdr: ChangeDetectorRef
 ) {}
