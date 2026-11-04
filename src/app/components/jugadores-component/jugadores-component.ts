@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Jugador } from '../../models/jugador';
 
 @Component({
@@ -7,10 +7,10 @@ import { Jugador } from '../../models/jugador';
   styleUrl: './jugadores-component.css',
   templateUrl: './jugadores-component.html',
 })
-export class JugadoresComponent {
+export class JugadoresComponent implements OnInit {
   arrayjugador: Jugador [] = [];
 
-  async mostrarJugadores(): Promise<void> {
+  async cargarJugadores(): Promise<void> {
     let path = "documents/jugadores.json";
     let response = await fetch(path);
     let datos = await response.json();
@@ -20,6 +20,10 @@ export class JugadoresComponent {
     }
     this._cdr.detectChanges();
   }
+  async ngOnInit(): Promise<void> {
+    await this.cargarJugadores();
+  }
+  
   constructor(
     private _cdr: ChangeDetectorRef
   ){}
