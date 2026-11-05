@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-padre-deportes-component',
@@ -10,5 +10,9 @@ export class PadreDeportesComponent {
   arraydeportes!: string [];
   constructor() {
     this.arraydeportes = ["Baloncesto", "Hockey", "Petanca", "Frisby", "Futbol"]
+  }
+
+  seleccionarFavorito(): void {
+    console.log("Soy el padre")
   }
 }
