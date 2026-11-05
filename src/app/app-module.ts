@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { BuscarClienteComponent } from './components/buscar-cliente-component/buscar-cliente-component';
 import { HijoDeporteComponent } from './components/hijo-deporte-component/hijo-deporte-component';
 import { PadreDeportesComponent } from './components/padre-deportes-component/padre-deportes-component';
+import { LibreriaComponent } from './components/libreria-component/libreria-component';
+import { ComicComponent } from './components/comic-component/comic-component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { PadreDeportesComponent } from './components/padre-deportes-component/pa
     BuscarClienteComponent,
     HijoDeporteComponent,
     PadreDeportesComponent,
+    LibreriaComponent,
+    ComicComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],

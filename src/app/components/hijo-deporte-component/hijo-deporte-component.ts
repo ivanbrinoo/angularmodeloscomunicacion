@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-hijo-deporte-component',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './hijo-deporte-component.css',
   templateUrl: './hijo-deporte-component.html',
 })
-export class HijoDeporteComponent {}
+export class HijoDeporteComponent {
+  @Input() sport!: string;
+}
