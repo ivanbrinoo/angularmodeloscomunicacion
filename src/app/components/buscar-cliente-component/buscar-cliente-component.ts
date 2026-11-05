@@ -11,6 +11,7 @@ import { Clientes } from '../../models/cliente';
 export class BuscarClienteComponent implements OnInit {
 @ViewChild("cajaid") cajaid!: ElementRef;
 cliente!: Clientes;
+arrayclientes: Clientes[] = [];
 
 
 async ngOnInit(): Promise<void> {
@@ -18,7 +19,8 @@ async ngOnInit(): Promise<void> {
   let response = await fetch(ruta);
   let datos = await response.json();
   for (let elemento of datos){
-    
+    let cli = new Clientes(elemento.idcliente, elemento.nombre, elemento.paginaweb, elemento.imagencliente);
+    this.arrayclientes.push(cli);
   }
 }
 constructor(
