@@ -12,5 +12,6 @@ export class HijoDeporteComponent {
 
   mostrarFavorito(): void {
     this.seleccionarFavorito.emit( this.sport);
+    
   }
 }
