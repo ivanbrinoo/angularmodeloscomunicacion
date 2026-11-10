@@ -11,7 +11,6 @@ export class PadreNumerosComponent {
   @ViewChild("cajanumero") cajanumero!: ElementRef;
   suma: number = 0;
 
-
   constructor(){
     this.arraynumeros = [5, 9, 4, 3, 0 , 2, 1]
   }

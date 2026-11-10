@@ -8,6 +8,7 @@ import { BuscarClienteComponent } from './components/buscar-cliente-component/bu
 import { PadreDeportesComponent } from './components/padre-deportes-component/padre-deportes-component';
 import { LibreriaComponent } from './components/libreria-component/libreria-component';
 import { PadreNumerosComponent } from './components/padre-numeros-component/padre-numeros-component';
+import { CineComponent } from './components/cine-component/cine-component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "padres", component: PadreDeportesComponent},
   { path: "libreria", component: LibreriaComponent},
   { path: "padrenumero", component: PadreNumerosComponent},
+  { path: "cine", component: CineComponent},
   { path: "comics", component: ComicsSimpleComponent}
 ];
 
