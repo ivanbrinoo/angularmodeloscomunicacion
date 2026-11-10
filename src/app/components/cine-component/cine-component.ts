@@ -34,7 +34,8 @@ async ngOnInit(): Promise<void> {
       pelicula.Titulo,
       pelicula.Fecha_Estreno,
       pelicula.Director,
-      pelicula.YouTube
+      pelicula.YouTube,
+      pelicula.Argumento
     );
     this.pelicula.push(peli);
   }
